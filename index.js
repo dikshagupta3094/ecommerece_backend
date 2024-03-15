@@ -8,6 +8,10 @@ const bcrypt = require("bcryptjs");
 /**Create server */
 const app = express();
 
+//convert the JSON data into javascript object so we used middleware here
+
+app.use(express.json())
+
 
 
 //MongoDB connection
@@ -49,6 +53,9 @@ async function init() {
   }
 }
 
+//stich router to app
+
+require('./route/auth.route.js')(app)
 app.listen(PORT_config.PORT, () => {
     console.log(`Server is created at ${PORT_config.PORT}`);
   });
