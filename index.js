@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const PORT_config = require("./config/port.config.js");
 const db_config = require("./config/db.config.js");
-const { findOne } = require("./models/user.model.js");
+// const { findOne } = require("./models/user.model.js");
 const user_model = require("./models/user.model.js");
 const bcrypt = require("bcryptjs");
 /**Create server */
